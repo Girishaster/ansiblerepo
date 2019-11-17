@@ -1,0 +1,10 @@
+[webservers]
+MH1
+MH2
+
+[webservers:vars]
+ansible_user=shwetha
+ansible_become=true 
+ansible_connection=ssh 
+
+

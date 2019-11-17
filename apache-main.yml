@@ -1,0 +1,23 @@
+---
+- name: main_apache 
+  hosts: webservers 
+  serial: 2
+  become: true 
+
+  pre_tasks: 
+  - name: PRE 
+    debug: 
+      msg: "MAIN PB Pre Task"
+
+  roles: 
+    - apacherole 
+  tasks: 
+  - name: MAIN_TASK 
+    debug: 
+      msg: "MAIN PLAYBOOK TASK" 
+
+  post_tasks:
+  - name: POST 
+    debug: 
+      msg: "Post Task" 
+
